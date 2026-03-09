@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Industrial Management Dashboard</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --text: #c9d1d9;
+      --card: #161b22;
+      --accent: #238636;
+      --hover: #2ea043;
+    }
+    body.light {
+      --bg: #ffffff;
+      --text: #24292e;
+      --card: #f6f8fa;
+      --accent: #2ea043;
+      --hover: #238636;
+    }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      transition: all 0.4s ease;
+    }
+    .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+    header { padding: 40px 0 20px; }
+    .school-icon { font-size: 100px; margin: 0; }
+    h1 { font-size: 3em; margin: 10px 0; }
+    .theme-buttons { margin: 20px 0; }
+    .theme-buttons button {
+      padding: 12px 30px;
+      margin: 0 15px;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    #dark { background: linear-gradient(135deg, #6a11cb, #2575fc); color: white; }
+    #light { background: linear-gradient(135deg, #ffecd2, #fcb69f); color: #333; }
+    h2 { font-size: 2.2em; margin: 40px 0 20px; }
+    .subjects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+    .card {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+    .card:hover { transform: translateY(-12px); box-shadow: 0 15px 40px rgba(0,0,0,0.3); }
+    .icon { font-size: 60px; margin-bottom: 15px; }
+    .card h3 { margin: 10px 0; font-size: 1.5em; }
+    .contact {
+      margin-top: 60px;
+    }
+    .whatsapp-btn {
+      display: inline-block;
+      background: #25D366;
+      color: white;
+      padding: 16px 50px;
+      border-radius: 50px;
+      font-size: 1.3em;
+      text-decoration: none;
+      box-shadow: 0 8px 25px rgba(37,213,102,0.4);
+      transition: all 0.3s;
+    }
+    .whatsapp-btn:hover { background: #128C7E; transform: scale(1.05); }
+  </style>
+</head>
+<body class="dark">
+
+  <div class="container">
+    <header>
+      <div class="school-icon">🏫</div>
+      <h1>Industrial Management</h1>
+      <p>Student Dashboard</p>
+    </header>
+
+    <div class="theme-buttons">
+      <button id="dark">Dark Theme</button>
+      <button id="light">Light Theme</button>
+    </div>
+
+    <h2>Subjects</h2>
+    <div class="subjects-grid">
+      <div class="card">
+        <div class="icon">🏭</div>
+        <h3>Industrial Management</h3>
+      </div>
+      <div class="card">
+        <div class="icon">🔧</div>
+        <h3>Applied Mechanics</h3>
+      </div>
+      <div class="card">
+        <div class="icon">🛠️</div>
+        <h3>Technician Skills</h3>
+      </div>
+    </div>
+
+    <div class="contact">
+      <a href="https://wa.me/923001234567?text=Hello%20Admin,%20I%20have%20a%20query%20about%20Industrial%20Management" class="whatsapp-btn">
+        WhatsApp Contact Admin
+      </a>
+    </div>
+  </div>
+
+  <script>
+    const body = document.body;
+    document.getElementById('dark').onclick = () => body.className = 'dark';
+    document.getElementById('light').onclick = () => body.className = 'light';
+  </script>
+
+</body>
+</html>
